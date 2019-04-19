@@ -86,28 +86,41 @@ make_melon_type_lookup(melon_types)
 class Melon(object):
     """A melon in a melon harvest."""
 
-    # def __init__:
-
     # Needs __init__ and is_sellable methods
+    def __init__(self, shape, color, field, name_harvester):
+        self.shape = shape
+        self.color = color
+        self.field = field
+        self.name_harvester = name_harvester
+
+    def is_sellable(self):
+            if self.shape >= 5 and self.color >= 5:
+                return True
+            return False
 
 def make_melons(melon_types):
     """Returns a list of Melon objects."""
 
-    # Fill in the rest
+    for melon in melon_types:
+        melon = melon.name
 
 def get_sellability_report(melons):
     """Given a list of melon object, prints whether each one is sellable."""
 
     # Fill in the rest 
 
-muskmelon = MelonType('musk', 1998, 'green',  'seedless', 'bestseller', 'Muskmelon')
-casaba = MelonType('cas', 2003, 'orange', 'has seeds', 'not bestseller', 'Casaba')
-crenshaw = MelonType('cren', 1996, 'green', 'has seeds', 'not_bestseller', 'Crenshaw')
-yellow_watermelon = MelonType('yw', 2013, 'yellow', 'has seeds', 'bestseller', 'Yellow Watermelon')
 
 
-melon_types = [muskmelon, casaba, crenshaw, yellow_watermelon]
-print(print_pairing_info(melon_types))
 
-make_melon_types()
-print_pairing_info(melon_types)
+#test gibberish
+# muskmelon = MelonType('musk', 1998, 'green',  'seedless', 'bestseller', 'Muskmelon')
+# casaba = MelonType('cas', 2003, 'orange', 'has seeds', 'not bestseller', 'Casaba')
+# crenshaw = MelonType('cren', 1996, 'green', 'has seeds', 'not_bestseller', 'Crenshaw')
+# yellow_watermelon = MelonType('yw', 2013, 'yellow', 'has seeds', 'bestseller', 'Yellow Watermelon')
+
+
+# melon_types = [muskmelon, casaba, crenshaw, yellow_watermelon]
+# print(print_pairing_info(melon_types))
+
+# make_melon_types()
+# print_pairing_info(melon_types)
